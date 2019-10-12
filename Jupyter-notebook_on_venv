@@ -1,0 +1,14 @@
+A good primter on python virtual envs: https://realpython.com/python-virtual-environments-a-primer/
+
+venv software
+Create a new venv: python -m venv env1
+active the virtual env: source env1/bin/activate  || workon env1
+
+I collected all of my future python projects under ~/.virtualenvs/qiskit_projects$ with mkvirtualenv wrapper. I also create an alias as mkvirtualenv3, which is mkvirtualenv --python=$(which python) qiskit_projects which upon being called , it will create a virtualenv with python being python3. In accordance with the use purpose of venvs, I will not use sudo apt-get install bash command to install packages system-wide. I will use pip3 (pip3 for python2.7) for python module installations such as scipy only into the scope of venv.
+
+To run, 
+$ python -m venv projectname
+$ source projectname/bin/activate
+(venv) $ pip install ipykernel
+(venv) $ ipython kernel install --user --name=projectname
+
